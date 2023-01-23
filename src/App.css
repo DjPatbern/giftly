@@ -1,38 +1,941 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+
 .App {
   text-align: center;
+  font-family: "Poppins", sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+
+.App-main {
+  background-color: #14142C;
+  color: white;  
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+button{
+  outline: none;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.wislist-cancel, button, .Link, .generate-text-section, .add-another, .privacy{
+  cursor: pointer;
+}
+
+/* DISABLE BUTTONS */
+
+.disable{
+  background-color: #EE2A7B;
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* CENTERING ALL THE AVAILABLE DIVS */
+.wishlist-container, .suggestions-container, .signup-container, .user-interest-container{
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  background-color: gray;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.welcome-container, .welcome-redirect-container, .userName-card-container, .user-interest-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  flex-direction: column;
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+
+/* WELCOME CSS */
+
+.back-to-home-btn{
+padding: 0%;
+padding-top: 3.7%;
+gap: 8px;
+width: 195px;
+height: 46px;
+background: #FFFFFF;
+border: 1px solid #121212;
+border-radius: 8px;
+text-decoration: none;
+float: right;
+margin-top: -25%;
+margin-right: -24%;
+font-family: 'General Sans Variable';
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+}
+
+.back-to-home-btn:hover{
+color: white;
+}
+.btn{
+  cursor: pointer;
+}
+.btn:hover, .dashboard-top-nav-btn:hover{
+  background-color: #9F1C52;
+}
+
+.cancel, .signup{
+padding: 16px 64px;
+gap: 8px;
+width: 184px;
+height: 56px;
+margin-right: 3%;
+border: none;
+background: #EE2A7B;
+border-radius: 8px;
+font-family: 'General Sans Variable';
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+}
+
+.cancel{
+  background-color: white;
+}
+.signup{
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.cancel:hover{
+  color: white;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+
+
+.welcome-text-btn-wrapper{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+}
+
+/* WISHLIST CSS */
+
+.wishlist-wrapper, .suggestion-wrapper, .signup-wrapper{
+width: 480px;
+height: 854px;
+left: 480px;
+top: 26px;
+margin: 10% 0%;
+background: #FFFFFF;
+border-radius: 16px;
+color: black;
+padding-top: 5%;
+max-width: 90%;
+}
+
+.user-interest-wrapper{
+  width: 480px;
+  height: 854px;
+  left: 480px;
+  top: 26px;
+  margin: 10% 0%;
+  background: #FFFFFF;
+  border-radius: 16px;
+  color: black;
+  padding-top: 5%;
+}
+
+.wishlist-wrapper, .suggestion-wrapper, .user-interest-wrapper{
+  overflow: hidden;
+  height: calc(100vh - 160px);
+  overflow: scroll;
+  overflow-x: hidden;
+}
+
+.wishlist-wrapper::-webkit-scrollbar, .suggestion-wrapper::-webkit-scrollbar, .user-interest-wrapper::-webkit-scrollbar {
+  width: 10px;
+}
+
+  ::-webkit-scrollbar-thumb {
+  background: rgb(104, 103, 103); 
+  border-radius: 6px;
+  
+}
+
+.wislist-cancel{
+  margin-right: -75%;
+  margin-bottom: 10%;
+}
+
+.wishlist-input-section{
+  padding-left: 13%;
+}
+
+.wishlist-inputs{
+text-align: left;
+}
+
+.listName-div{
+width: 384px;
+height: 96px;
+background: #F7F7F7;
+border: 1px solid #D5D8DF;
+border-radius: 8px;
+margin-bottom: 5%;
+}
+
+.listName-div p, .usernameInput p, .listName-div input{
+  padding-left: 2%;
+}
+
+.listName-div input, .added-wishlist input, .added-wishlist-extended input{
+  border: none;
+  outline: none;
+  background-color: #F7F7F7;
+}
+
+.added-wishlist{
+  width: 384px;
+  box-sizing: border-box;
+height: 189px;
+background: #F7F7F7;
+border-radius: 8px;
+padding: 10% 10% 0% 10%;
+}
+
+.added-wishlist-extended{
+  background: #F7F7F7;
+  width: 353px;
+  margin-top: -3%;
+padding-bottom: 8%;
+padding-left: 7.5%;
+border-radius: 8px;
+
+
+
+}
+
+
+.cancel-added-img{
+  margin-bottom: 65%;
+  background: #FFFFFF;
+  padding: 1%;
+  margin-left: -10%;
+  border-radius: 100%;
+}
+
+.maximize-flex{
+  display: flex;
+  justify-content: space-between;
+}
+
+.maximize-flex, .wislist-icon, 
+.purchase-link, .options-dropdown, 
+.qty-desc, .generate-text-section, 
+.privacy-section, 
+.delete-share-btn{
+  margin-bottom: 5%;
+}
+
+.purchase-link, .options-dropdown, .qty-desc{
+  padding-left: 10%;
+}
+
+.wislist-icon{
+  margin-bottom: -1.5%;
+  padding-right: 2%;
+}
+
+.added-btns button{
+  background-color: white;
+  border: none;
+  padding: 4%;
+  margin-right: 10%;
+  border-radius: 10px;
+  width: 40%;
+}
+
+.desired{
+  color: #EE2A7B;
+}
+
+.add-another{
+  border: 2px dashed rgb(185, 185, 185);
+  padding: 5% 5%; 
+  margin: 10%;
+  margin-left: 15%;
+  /* box-sizing: border-box; */
+}
+
+.generate-text{
+  color: #EE2A7B;
+}
+
+.privacy-section{
+  text-align: left;
+  padding-left: 13%;
+}
+
+.delete-share-btn button{
+    padding: 10px 54px;
+    gap: 8px;
+    width: 184px;
+    height: 56px;
+    margin-right: 3%;
+    border-radius: 8px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+}
+.delete-share-btn{
+margin-left: 10%;
+}
+
+.deletebtn{
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 6px;
+
+}
+
+.sharebtn{
+  background-color: #EE2A7B;
+  border: none;
+  color: white;
+  border-radius: 6px;
+
+}
+
+.stick-down{
+  position: sticky;
+  bottom: 0%;
+  background-color: white;
+  padding: 5% 0%;
+}
+
+/* SIGN UP CSS */
+.first-last-div{
+  display: flex;
+  justify-content: space-around;
+}
+
+.signupInput-div, .signupText{
+  text-align: left;
+}
+
+.signup-wrapper{
+  padding: 7%;
+  padding-bottom: 10%;
+}
+
+.firstname{
+  margin-right: 2%;
+}
+
+
+
+.signupInput-div{
+  width: 244px;
+height: 96px;
+background: #F7F7F7;
+border: 1px solid #D5D8DF;
+border-radius: 8px;
+margin-bottom: 4%;
+}
+
+.signupInput-div p, .signupInput-div input{
+  padding-left: 20px;
+}
+
+.signupInput-div input{
+  border: none;
+  outline: none;
+  background-color: #F7F7F7;
+}
+
+.email, .password{
+  width: 100%;
+}
+
+.password-wrapper{
+  display: flex;
+  justify-content: space-between;
+  margin-right: 20px;
+}
+
+.signUp-btn{
+  padding: 16px 64px;
+gap: 8px;
+color: white;
+width: 100%;
+height: 56px;
+border: none;
+/* Primary/Main */
+
+background: #EE2A7B;
+border-radius: 8px;
+}
+
+
+/* SUGGESTION CSS */
+
+.suggestedGift-wrapper{
+  display: flex;
+  justify-content: space-around;
+  padding: 3% 0%;
+  border-bottom: 0.5px solid #D5D8DF;
+}
+.gift-price-wrapper{
+  display: flex;
+}
+
+.gift-price-wrapper h4{
+  width: 109px;
+  height: 2px;
+  font-style: normal;
+  font-weight: bolder;
+  font-size: 16px;
+  line-height: 24px;
+  color: #121212;
+}
+
+
+.gift-name-price-wrapper{
+  margin-top: -18%;
+  margin-left: 10%;
+}
+
+.gift-price-wrapper img{
+  width: 40px;
+height: 40px;
+border-radius: 4px
+}
+
+.add-gift-btn{
+  padding: 8px;
+gap: 8px;
+
+width: 80px;
+height: 40px;
+right: 0px;
+top: 20px;
+background: #FFFFFF;
+border: 1px solid #121212;
+box-shadow: 0px 16px 40px 5px rgba(213, 216, 223, 0.2);
+border-radius: 8px;
+}
+
+.remove-gift-btn{
+  padding: 8px;
+  gap: 8px;
+  
+  width: 80px;
+  height: 40px;
+  right: 0px;
+  top: 20px;  
+  background: #FFFFFF;
+  color: #9F1C52;
+  border: 1px solid #9F1C52;  
+  box-shadow: 0px 16px 40px 5px rgba(213, 216, 223, 0.2);
+  border-radius: 8px;
+  
+}
+/* USERNAME CARD CSS */
+
+.userName-card-wrapper{
+padding: 48px;
+gap: 16px;
+width: 480px;
+height: 384px;
+left: 480px;
+top: 258px;
+color: black;
+background: #FFFFFF;
+border-radius: 16px;
+
+}
+
+.usernameInput{
+  width: 100%;
+  height: 96px;
+  background: #F7F7F7;
+  border: 1px solid #D5D8DF;
+  border-radius: 8px;
+  margin-bottom: 5%;
+}
+
+
+.usernameInput input{
+  border: none;
+  outline: none;
+  background-color: #F7F7F7;
+}
+
+.userName-card-wrapper input{
+  padding-left: 20px;
+}
+
+.nextStep-btn{
+  padding: 16px 64px;
+gap: 8px;
+color: white;
+width: 100%;
+height: 56px;
+border: none;
+background: #EE2A7B;
+font-size: larger;
+border-radius: 8px;
+}
+
+/* USER INTEREST CSS */
+
+.user-interest-wrapper{
+text-align: center;
+padding: 50px;
+padding-bottom: 0px;
+
+}
+
+
+
+.each-interest{
+  box-sizing: border-box;
+width: 117.33px;
+height: 96px;
+border: 1px solid #D5D8DF;
+border-radius: 8px;
+margin-bottom: 10%;
+}
+
+.interest-name{
+display: flex;
+align-items: flex-end;
+}
+
+.interest-enable{
+  background: #14142B;
+  color: white;
+}
+
+.interest-name p{
+text-align: left;
+padding-left: 4%;
+}
+
+.each-interest img{
+  float: right;
+  top: 0;
+}
+
+.interest-lists{
+  display: grid;
+  grid-template-columns: auto auto auto;
+  margin-left: 8%;
+}
+
+.interest-done-btn{
+  padding: 16px 64px;
+gap: 8px;
+color: white;
+width: 384px;
+height: 56px;
+font-size: larger;
+border: none;
+background: #EE2A7B;
+border-radius: 8px;
+}
+
+/* DASHBOARD CSS */
+
+.main {
+  text-align: start;
+  margin: 0;
+}
+
+.main-flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.Link {
+  text-align: start;
+  color: white;
+  display: flex;
+  font-size: 22px;
+  text-align: start;
+  text-decoration: none;
+  margin-top: 20px;
+  margin-right: 8px;
+  margin-left: 8px;
+}
+.dash-new{
+  padding: 4px 8px;
+gap: 8px;
+
+width: 30px;
+height: 20px;
+color: #121212;
+margin-left: 7px;
+
+background: #FDC9FF;
+border-radius: 4px;
+}
+
+
+@keyframes online-wish-tilt{
+  0%{
+    position: rotate(0deg);
+}
+25%{
+    transform: rotate(10deg);
+}
+
+50%{
+  transform: rotate(15deg);
+}
+
+100%{
+  transform: rotate(0deg);
+}
+}
+.online-wishes img {
+  z-index: 10;
+  animation: online-wish-tilt 3s linear infinite;
+  margin-top: 15%;
+}
+
+.icon {
+  height: 30px;
+  width: 30px;
+  margin-top: 4px;
+}
+
+.home {
+  width: 100%;
+  color: black;
+  background-color: white;
+  background-size: cover;
+  height: 100vh;
+  padding-bottom: 10%;
+}
+
+.wishlist-center-wrapper{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.dashboard-top-nav{
+  display: flex;
+  justify-content: space-around;
+  border-bottom: 1px #D5D8DF solid;
+  position: sticky;
+  z-index: 20;
+  top: 0;
+  background-color: white;
+  margin-left: 14%;
+}
+
+
+
+.dashboard-top-nav p{
+  width: 262px;
+height: 27px;
+font-style: normal;
+font-weight: 500;
+font-size: 18px;
+line-height: 27px;
+color: #121212;
+}
+
+.dashboard-search{
+  width: 325px;
+  padding-top: 9px;
+height: 40px;
+background: #F7F7F7;
+border-radius: 8px;
+margin-top: 7px;
+}
+
+.dashboard-search img{
+  margin-bottom: -4px;
+  margin-left: 13px;
+}
+
+.dashboard-search input{
+  background-color: #F7F7F7;
+  outline: none;
+  border: none;
+  margin-left: 15px;
+}
+
+.dashboard-top-nav-btn{
+padding: 6px 24px;
+gap: 8px;
+width: 180px;
+height: 50px;
+margin-top: 7px;
+background: #EE2A7B;
+border-radius: 8px;
+color: white;
+font-weight: bold;
+border: none;
+outline: none;
+}
+
+.dashboard-top-nav-btn img{
+  margin-bottom: -4%
+}
+
+.dashboard-logo{
+  padding: 15%;
+}
+.Link{
+  margin: 20% 10%;
+  font-size: small;
+}
+
+.Link img{
+  width: 10%;
+  height: 15px;
+  margin-right: 5px;
+}
+
+.none-active-nav{
+  font-weight: 500;
+font-size: 16px;
+line-height: 24px;
+color: #D5D8DF;
+}
+
+.active-nav{
+  font-weight: 600;
+font-size: 16px;
+line-height: 24px;
+color: #FFFFFF;
+}
+
+.sidebar{
+  width: 14%;
+  position: fixed;
+  background-color: #14142C;
+  top: 0%;
+  min-height: 100vh;
+}
+
+.profile-nub{
+  width: 22px;
+height: 22px;
+background: #EE2A7B;
+border: 1.5px solid #FFFFFF;
+border-radius: 100px;
+text-align: center;
+padding: 4px;
+margin-right: 2px;
+margin-top: -5px;
+}
+
+.profile{
+  margin-top: 70%;
+}
+
+
+
+/* WELCOME REDIRECT CSS */
+
+.resend-mail{
+  color: #EE2A7B;
+  text-align: center;
+}
+
+/* OUTLETS CSS */
+
+.popup-outlet {
+  position: fixed;
+  background: #00000050;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  z-index: 20;
+}
+
+.close-outlet{
+  display: none;
+}
+ 
+.outlet {
+  position: relative;
+  width: 0%;
+  margin: 0 auto;
+  margin-top: calc(85vh - 85vh - 20px);
+  border-radius: 4px;
+  padding: 20px;
+}
+
+/* STYLING FOR VERY SMALL PHONES */
+
+@media only screen and (max-width: 408px) and (min-width: 200px){
+  /* SIGN UP CSS */
+  .first-last-div{
+    display: block;
   }
-  to {
-    transform: rotate(360deg);
+
+  .signup-container{
+    max-height: auto;
+  }
+
+  .signup-wrapper{
+    padding-top: 20%;
+    box-sizing: border-box;
+    height: 77pc;
+  }
+
+  .firstname, .lastname{
+    margin-right: 0%;
+    width: 100%;
+  }
+
+  /* WELCOME PAGE CSS */
+
+  .back-to-home-btn{
+    margin-top: -55%;
+    margin-right: -7%;
+  }
+
+  .cancel{
+    margin-bottom: 20px;
+  }
+
+    /* STYLING FOR DASHBOARD */
+
+.wishlist-center-wrapper{
+  padding-bottom: 20px;
+}
+}
+
+/* STYLING FOR BIGGER PHONE SCREEN */
+@media (max-width: 600px){
+  .dashboard-top-nav{
+    margin-left: 0%;
+  }
+
+
+  /* drop down*/
+.dropdown-content {
+  display: none;
+  margin: 0 auto;
+  position: absolute;
+  width: 97%;
+  background-color: #14142B;
+}
+
+.dropdown-content a {
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  border-bottom: gray 1px solid;
+  text-align: center;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.setOpen {
+display: none;
+}
+    /* SIGN UP CSS */
+    .first-last-div{
+      display: block;
+    }
+  
+    .signup-container{
+      max-height: auto;
+    }
+  
+    .signup-wrapper{
+      padding-top: 20%;
+      box-sizing: border-box;
+      height: 77pc;
+    }
+  
+    .firstname, .lastname{
+      margin-right: 0%;
+      width: 100%;
+    }
+
+      /* WELCOME PAGE CSS */
+
+  .back-to-home-btn{
+    margin-top: -55%;
+    margin-right: -7%;
+  }
+
+  .cancel, .deletebtn{
+    margin-bottom: 20px;
+  }
+
+  .listName-div, .added-wishlist{
+    max-width: 95%;
+  }
+
+  /* STYLING FOR DASHBOARD */
+
+  .sidebar, .top-create-wishlist{
+    display: none;
+  }
+
+  .added-btns button{
+    width: 27%;
+  }
+
+  .userName-card-wrapper{
+    max-width: 15pc;
+  }
+
+
+  .user-interest-wrapper, .interest-done-btn{
+    max-width: 15pc;
+  }
+  .interest-lists{
+    grid-template-columns: auto auto;
+  }
+
+
+
+}
+
+/* STYLING FOR TABLETS */
+
+@media only screen and (max-width: 970px) and (min-width: 600px){
+  .signup-wrapper{
+    height: 60pc;
+  }
+
+  .back-to-home-btn{
+    margin-top: -55%;
+    margin-right: -7%;
+  }
+  .sidebar{
+    width: 20%;
+  }
+  .dashboard-top-nav{
+    margin-left: 20%;
+  }
+
+  .dropdown{
+    display: none;
   }
 }
+
+@media screen and (min-width: 600px) {
+  .dropdown {
+    display: none;
+  }
+}
+
+
