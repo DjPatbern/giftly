@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import logo from '../Assets/logo.png'
-import { Helmet } from "react-helmet-async";
+// import { Helmet } from "react-helmet-async";
 import { motion } from "framer-motion";
 
 const WelcomePage = () => {
@@ -10,7 +10,7 @@ const WelcomePage = () => {
     <>
 
     {/* REACT HELMET FOR SEO */}
-          <Helmet>
+          {/* <Helmet>
         <title>Welcome - Giftly</title>
         <meta
           name="description"
@@ -18,7 +18,7 @@ const WelcomePage = () => {
           create a wish list in minutes and share to your friends on your favourite platforms!"
         />
         <link rel="canonical" href="/welcome" />
-      </Helmet>
+      </Helmet> */}
 
       {/*  PAGE IN AND OUT MOTION ANIMATION */}
 <motion.div className='welcome-container' initial={{opacity: 0}} animate={{opacity: 1}} exit={{opacity: 0}}>

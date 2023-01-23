@@ -13,7 +13,7 @@ import { excerpt } from "../Utility";
 import vector from "../Assets/Vector.png";
 import { useSignUpContext } from "../ContextsManagers/SignUpContext";
 import { useInterestContext } from "../ContextsManagers/InterestContext";
-import { Helmet } from "react-helmet-async";
+// import { Helmet } from "react-helmet-async";
 import { Divide as Hamburger } from "hamburger-react";
 import { motion } from "framer-motion";
 
@@ -36,7 +36,7 @@ const Dashboard = () => {
     <motion.div initial={{opacity: 0}} animate={{opacity: 1}} exit={{opacity: 0}}>
 
       {/* REACT HELMET FOR SEO */}
-      <Helmet>
+      {/* <Helmet>
         <title>Dashboard - Giftly</title>
         <meta
           name="description"
@@ -44,7 +44,7 @@ const Dashboard = () => {
           create a wish list in minutes and share to your friends on your favourite platforms!"
         />
         <link rel="canonical" href="/dashboard" />
-      </Helmet>
+      </Helmet> */}
       <main className="main .bg-primary	"   >
         <div className="main-flex">
 

@@ -4,7 +4,7 @@ import logo from '../Assets/logo.png'
 import eye from '../Assets/eye.png'
 import { useNavigate } from 'react-router-dom'
 import {  useSignUpContext } from '../ContextsManagers/SignUpContext'
-import { Helmet } from "react-helmet-async";
+// import { Helmet } from "react-helmet-async";
 import { motion } from "framer-motion";
 
 const SignUp = () => {
@@ -27,7 +27,7 @@ const SignUp = () => {
   return (
     <>
     {/* REACT HELMET FOR SEO */}
-        <Helmet>
+        {/* <Helmet>
         <title>Sign Up - Giftly</title>
         <meta
           name="description"
@@ -35,7 +35,7 @@ const SignUp = () => {
           create a wish list in minutes and share to your friends on your favourite platforms!"
         />
         <link rel="canonical" href="/signup" />
-      </Helmet>
+      </Helmet> */}
 
       {/* PAGE IN AND OUT MOTION ANIMATION */}
     <motion.div className='signup-container'initial={{opacity: 0}} animate={{opacity: 1}} exit={{opacity: 0}} >
