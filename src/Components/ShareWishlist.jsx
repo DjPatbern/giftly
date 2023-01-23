@@ -51,7 +51,9 @@ const ShareWishlist = () => {
     
   return (
     // PAGE IN AND OUT MOTION ANIMATION
-    <motion.div className="wishlist-container" initial={{opacity: 0}} animate={{opacity: 1}} exit={{opacity: 0}}>
+    <motion.div className="wishlist-container" initial={{ width: 0 }}
+    animate={{ width: "100%" }}
+    exit={{ x: window.innerWidth, transition: { duration: 0.1 } }}>
       <div className="wishlist-wrapper">
 
         {/* INITIAL WISH LIST FIELD */}

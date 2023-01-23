@@ -1,7 +1,7 @@
 import React from "react";
 import logo from "../Assets/logo.png";
 import { useInterestContext } from "../ContextsManagers/InterestContext";
-// import { Helmet } from "react-helmet-async";
+import { Helmet } from "react-helmet-async";
 import { motion } from "framer-motion";
 
 const UsernameCard = () => {
@@ -13,7 +13,7 @@ const UsernameCard = () => {
     <>
 
     {/* REACT HELMET FOR SEO */}
-              {/* <Helmet>
+              <Helmet>
         <title>Set Username - Giftly</title>
         <meta
           name="description"
@@ -21,10 +21,12 @@ const UsernameCard = () => {
           create a wish list in minutes and share to your friends on your favourite platforms!"
         />
         <link rel="canonical" href="/dashboard/setusername" />
-      </Helmet> */}
+      </Helmet>
 
       {/* PAGE IN AND OUT MOTION ANIMATION */}
-    <motion.div className="userName-card-container" initial={{opacity: 0}} animate={{opacity: 1}} exit={{opacity: 0}}>
+    <motion.div className="userName-card-container" initial={{ width: 0 }}
+        animate={{ width: "100%" }}
+        exit={{ x: window.innerWidth, transition: { duration: 0.1 } }}>
       <div className="userName-card-wrapper">
         <section>
           <img src={logo} alt="logo" />
