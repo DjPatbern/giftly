@@ -64,7 +64,7 @@ const UserInterestCard = () => {
           <section className="stick-down">
             <button
               className={
-                interests.length > 2
+                interests.length > 4
                   ? "interest-done-btn"
                   : "interest-done-btn disable"
               }

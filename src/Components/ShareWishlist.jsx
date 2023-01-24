@@ -461,7 +461,7 @@ const ShareWishlist = () => {
               }
               onClick={handleDelete}
             >
-              <img src={trash} alt="trash" className="wislist-icon" />{" "}
+              <img src={trash} alt="trash" className="wislist-icon del-icon" />{" "}
               <span>Delete</span>
             </button>
 
@@ -472,7 +472,7 @@ const ShareWishlist = () => {
               }
               onClick={handleShare}
             >
-              <img src={send} alt="send" className="wislist-icon" />{" "}
+              <img src={send} alt="send" className="wislist-icon share-icon" />{" "}
               <span>Share</span>
             </button>
 

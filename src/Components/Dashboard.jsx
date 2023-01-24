@@ -23,8 +23,7 @@ const Dashboard = () => {
   // FIRST AND LAST NAME IMPORTED AFTER USER IS SIGNED UP
   const { firstName, lastName } = useSignUpContext();
 
-  // A LOGIC TO CLOSE THE SET USERNAME AND INTEREST COMPONENT AFTER IT'S POPUP
-  const {closeOutlet} = useInterestContext()
+
   const navigate = useNavigate()
 
   const [isOpen, setOpen] = useState(false);  // For Phone Size Hamburger
@@ -131,7 +130,7 @@ const Dashboard = () => {
               </section>
 
               {/* OUTLET TO HANDLE USERNAME AND INTEREST POPUP */}
-              <div className={closeOutlet ? "close-outlet" : "popup-outlet"}>
+              <div className="popup-outlet">
                 <div className="outlet">
                   <Outlet />
                 </div>

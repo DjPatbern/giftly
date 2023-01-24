@@ -34,7 +34,6 @@ const InterestDataSource =() => {
 
 
      const [interests, setInterests] = useState([]) //STATE TO HOLD ALL USER'S THE ADDED INTEREST
-     const [closeOutlet, setCloseOutlet] = useState(false) //STATE TO DISABLE INTEREST POPUP WHEN ACTION IS FINISHED
      const [userName, setUserName] = useState("") //STATE TO HOLD USERNAME WHEN SET BY USER
 
      //USERNAME 
@@ -51,9 +50,9 @@ const InterestDataSource =() => {
 
      const handleInterest = (e) => {
         e.preventDefault()
-        if(interests.length >= 3){
+        if(interests.length >= 5){
           navigate('/dashboard')
-          setCloseOutlet(true)
+          
         }
       }
 
@@ -98,7 +97,7 @@ const InterestDataSource =() => {
       
       const navigate = useNavigate();
 
-      return{UserInterestList,closeOutlet,
+      return{UserInterestList,
         handleInterest,addInterest,interests, removeInterest, userName, 
         setUserName, handleUserName}
 

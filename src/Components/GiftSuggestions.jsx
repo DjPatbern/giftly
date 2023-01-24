@@ -66,10 +66,10 @@ const GiftSuggestions = () => {
         <div className="stick-down">
           <section className="delete-share-btn">
             <button className="deletebtn" onClick={clearSuggestions}>
-              Cancel
+              <span>Cancel</span>
             </button>
             <button className="sharebtn" onClick={(e) => navigate("/")}>
-              Done
+              <span>Done</span>
             </button>
           </section>
         </div>
