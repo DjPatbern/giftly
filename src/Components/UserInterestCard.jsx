@@ -61,7 +61,7 @@ const UserInterestCard = () => {
               </div>
             ))}
           </section>
-          <section className="stick-down">
+          <section className="stick-down int-btn">
             <button
               className={
                 interests.length > 4

@@ -516,6 +516,7 @@ align-items: flex-end;
 .interest-name p{
 text-align: left;
 padding-left: 4%;
+
 }
 
 .each-interest img{
@@ -823,6 +824,10 @@ margin-top: -5px;
     max-width: 50%;
   }
 
+  .wishlist-wrapper{
+    min-height: 120vh;
+  }
+
 
 
 
@@ -908,6 +913,12 @@ display: none;
   .user-interest-wrapper,  .interest-done-btn{
     max-width: 200px;
   }
+
+  .int-btn{
+    min-width: 215px;
+  }
+
+
 
 
    /* .interest-done-btn{
